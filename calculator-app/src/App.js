@@ -3,8 +3,6 @@ import "./styles.css"
 import DigitButton from "./DigitButton"
 import OperationButton from "./OperationButton"
 
-//testing
-
 export const ACTIONS = {
   ADD_DIGIT: 'add-digit',
   CHOOSE_OPERATION: 'choose-operation',
@@ -17,8 +15,7 @@ function reducer(state, { type, payload }) {
   switch(type) {
     case ACTIONS.ADD_DIGIT:
       return {
-        ...state,
-        currentOperand: `${currentOperand || "" }${payload.digit}`,
+        ...state, currentOperand: `${currentOperand || "" }${payload.digit}`,
       }
   }
 }
